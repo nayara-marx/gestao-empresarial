@@ -12,7 +12,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 Route::post('/cadastro', [HomeController::class, 'store'])->name('cadastro.store');
 Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
-Route::post('/cadastro', [HomeController::class, 'store'])->name('cadastro.enviar');  // <-- Rota que está faltando
+Route::post('/cadastro', [HomeController::class, 'store'])->name('cadastro.enviar'); 
 
 
 // Login de usuário
