@@ -44,7 +44,6 @@ class ProdutoController extends Controller
 
     public function show($id)
     {
-        // Para simplificar, pegar o produto baseado no id do array
         $produtos = [
             1 => (object)[
                 'id' => 1,
