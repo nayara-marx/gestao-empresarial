@@ -83,7 +83,6 @@ gestao-empresarial/
 | **Dev.to** | Dicas de Laravel e melhores práticas | [https://dev.to/t/laravel](https://dev.to/t/laravel) |
 | **Medium** | Uso de Blade Templates | [https://medium.com/search?q=laravel+blade](https://medium.com/search?q=laravel+blade) |
 | **Alura** | Fundamentos do Laravel | [https://www.alura.com.br/artigos/o-que-e-laravel](https://www.alura.com.br/artigos/o-que-e-laravel) |
-| **Rocketseat** | CRUD no Laravel | [https://blog.rocketseat.com.br/tag/laravel/](https://blog.rocketseat.com.br/tag/laravel/) |
 | **ViaCEP** | API de endereços | [https://viacep.com.br](https://viacep.com.br) |
 | **UX Collective** | Princípios de design de interface | [https://brasil.uxdesign.cc/](https://brasil.uxdesign.cc/) |
 | **Smashing Magazine** | Acessibilidade e UX | [https://www.smashingmagazine.com/category/accessibility](https://www.smashingmagazine.com/category/accessibility) |
