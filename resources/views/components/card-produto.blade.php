@@ -1,15 +1,9 @@
-@props(['imagem', 'nome', 'descricao', 'link'])
-
-<div class="card h-100">
-    @if($imagem)
-    <img src="{{ asset('storage/' . $imagem) }}" class="card-img-top" alt="{{ $nome }}">
-    @else
-    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Sem imagem">
-    @endif
-
-    <div class="card-body d-flex flex-column">
+<div class="card" style="width: 18rem;">
+    <img src="{{ Storage::url($imagem) }}" class="card-img-top" alt="{{ $nome }}">
+    <div class="card-body">
         <h5 class="card-title">{{ $nome }}</h5>
-        <p class="card-text">{{ Str::limit($descricao, 100) }}</p>
-        <a href="{{ $link }}" class="btn btn-primary mt-auto">Ver detalhes</a>
+        <p class="card-text">{{ $descricao ?? '' }}</p>
+        <p><strong>R$ {{ number_format($preco ?? 0,2,',','.') }}</strong></p>
+        <a href="{{ $link }}" class="btn btn-primary">Ver Produto</a>
     </div>
 </div>

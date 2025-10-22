@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Models\Produto;
+
 class HomeController extends Controller
 {
+    // Página inicial
     public function index()
     {
-        return view('pages.home'); 
+        $produtos = Produto::take(3)->get(); // pega 3 produtos em destaque
+        return view('pages.home', compact('produtos'));
     }
 
-    public function cadastro()
+    public function sobre()
     {
-        return view('pages.cadastro'); 
+        return view('pages.sobre');
     }
 
     public function login()
@@ -19,25 +24,8 @@ class HomeController extends Controller
         return view('pages.login');
     }
 
-    public function sobre()
+    public function cadastro()
     {
-        return view('pages.sobre'); 
+        return view('pages.cadastro');
     }
-    public function registrar(Request $request)
-{
-   
-    return back()->with('success', 'Cadastro realizado com sucesso!');
-}
-public function store(Request $request)
-{
-    $request->validate([
-        'nome' => 'required|string|max:255',
-        'email' => 'required|email',
-        'senha' => 'required|min:6',
-    ]);
-
-    return redirect()->route('cadastro')->with('success', 'Cadastro realizado com sucesso!');
-}
-
-
 }

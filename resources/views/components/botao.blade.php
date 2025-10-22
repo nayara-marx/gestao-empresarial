@@ -1,5 +1,3 @@
-@props(['tipo' => 'button', 'cor' => 'primary'])
-
-<button type="{{ $tipo }}" {{ $attributes->merge(['class' => "btn btn-$cor"]) }}>
+<button type="{{ $tipo ?? 'button' }}" class="btn btn-{{ $cor ?? 'primary' }}">
     {{ $slot }}
 </button>

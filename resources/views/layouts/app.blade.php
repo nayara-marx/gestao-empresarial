@@ -1,88 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@yield('title') - InovaDigital</title>
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Google Fonts (opcional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title') | Gestão Empresarial</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f8fa;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            background-color: #121212;
+            color: #E0E0E0;
         }
-        .navbar {
-            background-color: #0056b3; /* azul */
+        a {
+            color: #E0E0E0;
         }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important; /* branco */
-        }
-        .nav-link:hover {
-            color: #ffc107 !important; /* amarelo */
-        }
-        footer {
-            background-color: #0056b3;
+        a:hover {
             color: #ffffff;
-            padding: 15px 0;
-            margin-top: auto;
-            text-align: center;
-        }
-        .container {
-            margin-top: 30px;
-            margin-bottom: 30px;
         }
         .card {
-            border-radius: 8px;
-            box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border: none;
+            border-radius: 0.5rem;
+        }
+        .btn-primary {
+            background-color: #333333;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #555555;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        .form-control {
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border: 1px solid #333333;
+        }
+        .form-control:focus {
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border-color: #555555;
+            box-shadow: none;
+        }
+        .navbar {
+            background-color: #1E1E1E !important;
+        }
+        .alert-success {
+            background-color: #28a745;
+            color: white;
+        }
+        .alert-danger {
+            background-color: #dc3545;
+            color: white;
         }
     </style>
 </head>
 <body>
+    @include('partials.navbar')
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="{{ route('home') }}">InovaDigital</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('produtos.index') }}">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('cadastro') }}">Cadastro</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('sobre') }}">Sobre</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Conteúdo principal -->
-    <main class="flex-grow-1">
-        <div class="container">
-            @yield('content')
-        </div>
+    <main class="py-4">
+        @yield('content')
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            &copy; {{ date('Y') }} InovaDigital. Todos os direitos reservados.
-        </div>
-    </footer>
-
-    <!-- Bootstrap 5 JS Bundle (Popper + JS) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    @include('partials.footer')
 </body>
 </html>

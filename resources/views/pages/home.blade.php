@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Minha Loja')
+@section('title', 'Home')
 
 @section('content')
-<div class="bg-primary text-white py-5">
-    <div class="container text-center">
-        <h1 class="display-4 fw-bold">Descontos imperdíveis para você!</h1>
-        <p class="lead mb-4">Aproveite nossas ofertas exclusivas com até <span class="fw-bold">50% OFF</span> em diversos produtos selecionados.</p>
-        <a href="{{ route('produtos.index') }}" class="btn btn-light btn-lg">Confira Agora</a>
+<div class="container mt-4">
+    <div class="jumbotron text-center py-5">
+        <h1 class="display-5">Bem-vindo ao Sistema de Gestão Empresarial</h1>
+        <p class="lead">Gerencie clientes, produtos e muito mais com facilidade.</p>
+        <a href="{{ route('produtos.index') }}" class="btn btn-primary btn-lg mt-3">Ver Produtos</a>
     </div>
 </div>
 @endsection
