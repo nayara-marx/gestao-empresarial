@@ -86,6 +86,8 @@ gestao-empresarial/
 | **ViaCEP** | API de endereços | [https://viacep.com.br](https://viacep.com.br) |
 | **UX Collective** | Princípios de design de interface | [https://brasil.uxdesign.cc/](https://brasil.uxdesign.cc/) |
 | **Smashing Magazine** | Acessibilidade e UX | [https://www.smashingmagazine.com/category/accessibility](https://www.smashingmagazine.com/category/accessibility) |
+| **YouTube** | Tutorial: Como criar Models e Migrations no Laravel | [https://youtu.be/7oFtrv89GTE?si=1XM5ZwCZ5O-FShhE](https://youtu.be/7oFtrv89GTE?si=1XM5ZwCZ5O-FShhE) |
+
 
 ---
 
